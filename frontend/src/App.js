@@ -18,7 +18,7 @@ function App() {
     setLoading(true);
     setError(null);
     try {
-      const response = await fetch(`http://localhost:8000/search?q=${query}`);
+      const response = await fetch(`https://cooks-illustrated-recipe-finder-app.onrender.com/search?q=${query}`);
       if (!response.ok) throw new Error("Something went wrong");
       const data = await response.json();
       setResults(data);
